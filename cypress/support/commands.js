@@ -11,6 +11,12 @@
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
+Cypress.Commands.add("addItem", (amount) => {
+  for (let i = 0; i < amount; i++) {
+    cy.get(".btn_inventory").eq(i).click();
+    cy.get(".btn_inventory").eq(i).should("contain.text", "Remove");
+  }
+});
 //
 //
 // -- This is a child command --
