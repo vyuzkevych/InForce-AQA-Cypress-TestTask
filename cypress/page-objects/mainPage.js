@@ -7,12 +7,7 @@ class MainPage {
     }
 
     action = {
-        clickOnCartBtn: () => this.get.cartBtn().click(),
-        getItemName: (index) => {
-            return this.get.itemName().eq(index).then(($el) => {
-                return $el.text();
-            })
-        }
+        clickOnCartBtn: () => this.get.cartBtn().click()
     }
 }
 
