@@ -50,7 +50,7 @@ describe("Test Task: Cypress E2E Testing", () => {
         cy.then(() => {
             checkoutPage.get.itemName().eq(0).should("contain.text", itemNames[0]);
             checkoutPage.get.itemName().eq(1).should("contain.text", itemNames[1]);
-        })
+        });
 
         cy.log("Verifying the total price with tax on Checkout");
         checkoutPage.get.itemPrice().each(($price) => {
@@ -78,5 +78,8 @@ describe("Test Task: Cypress E2E Testing", () => {
 
         cy.log("After completing the checkout, navigate back to the main page");
         checkoutPage.action.clickOnBackHomeBtn();
+
+        cy.log("Logout from the website and verify that the user is successfully logged out");
+        // there is no logout button on the website
     });
 });

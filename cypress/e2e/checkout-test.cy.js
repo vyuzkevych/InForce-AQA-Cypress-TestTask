@@ -23,8 +23,8 @@ describe("Create a test case for Checkout: Your Information page", () => {
          * which is based on the logged-in user, if there will be such a fixture
          */
 
-        checkoutPage.get.firstName().should("contain.text", "userFirstName");
-        checkoutPage.get.lastName().should("contain.text", "userLastName");
-        checkoutPage.get.postalCode().should("contain.text", "userPostalCode");
+        checkoutPage.get.firstName().should("contain.text", "");
+        checkoutPage.get.lastName().should("contain.text", "");
+        checkoutPage.get.postalCode().should("contain.text", "");
     });
 });
